@@ -1,0 +1,420 @@
+@use "/src/style/vars.scss";
+
+.main-alldestinations {
+  &-description {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto 50px;
+    h1 {
+      font-family: "Nixie One", Arial, Helvetica, sans-serif;
+      font-size: 3rem;
+      text-align: center;
+      color: vars.$blog-color;
+    }
+    &-subtitle {
+      font-family: "Caveat", cursive;
+      font-size: 2rem;
+      margin: 10px auto 30px;
+      text-align: center;
+    }
+    &-content {
+      p {
+        text-align: center;
+        font-weight: 200;
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+        color: rgba(40, 40, 40, 0.964);
+        margin-bottom: 0.7rem;
+        strong {
+          font-weight: 200;
+          position: relative;
+          &::after {
+            content: "";
+            height: 40%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 60%;
+            left: 0;
+            background-color: vars.$blog-color;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+  &-continent {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    &-item {
+      margin: auto;
+      width: 500px;
+      margin-bottom: 100px;
+
+      &-content {
+        height: 350px;
+        width: 500px;
+        margin: auto;
+        position: relative;
+        &-text {
+          background-color: vars.$blog-secondColor;
+          position: absolute;
+          row-gap: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 50%;
+          display: grid;
+          z-index: 400;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 2fr 1fr;
+          margin: auto;
+          width: 400px;
+          height: 250px;
+          padding: 10px;
+          &-link {
+            padding: 5px 12px;
+            font-family: "Caveat", cursive;
+            font-size: 1.5rem;
+            background-color: vars.$blog-color;
+            width: 200px;
+            text-align: center;
+            display: block;
+            color: white;
+            margin: 10px auto;
+            transition: 0.5s;
+            &:hover {
+              background: #95aca858;
+            }
+          }
+          h2 {
+            font-size: 1.5rem;
+            color: vars.$blog-color;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          p {
+            font-weight: 200;
+            font-size: 0.7rem;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1.2rem;
+            color: rgba(40, 40, 40, 0.964);
+          }
+        }
+        &-img {
+          height: 350px;
+          width: 500px;
+          position: absolute;
+          right: 20%;
+        }
+      }
+      &-countryList {
+        margin-top: 10px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        &-link {
+          position: relative;
+          font-size: 1.2rem;
+          margin: 10px;
+
+          &:after {
+            position: absolute;
+            content: "";
+            display: block;
+            height: 40%;
+            width: 100%;
+            background-color: vars.$blog-secondColor;
+            top: 60%;
+            left: 0;
+            opacity: 0.5;
+            transition: 0.5s;
+          }
+          &:hover {
+            &:after {
+              background-color: vars.$blog-color;
+            }
+          }
+        }
+      }
+    }
+
+    &-item-pair {
+      .main-alldestinations-continent-item-content {
+        .main-alldestinations-continent-item-content-text {
+          background-color: vars.$blog-secondColor;
+          position: absolute;
+          left: -25%;
+        }
+        &-img {
+          height: 350px;
+          width: 500px;
+          position: absolute;
+          left: 20%;
+        }
+      }
+    }
+  }
+
+  &-countryListPays {
+    width: 100%;
+    margin: auto;
+    &-title {
+      color: rgba(40, 40, 40, 0.964);
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 90px auto;
+      span {
+        display: inline-block;
+        height: 1px;
+        width: 30%;
+        background: black;
+      }
+      font-size: 2rem;
+      font-weight: 200;
+      text-align: center;
+    }
+    &-list {
+      margin-top: 10px;
+      width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      &-item {
+        width: 100%;
+        flex: none;
+        height: auto;
+        border-radius: 20px;
+        overflow: hidden;
+
+        &-img {
+          width: 100%;
+          height: 250px;
+          display: block;
+          object-fit: cover;
+        }
+        &-title {
+          background-color: vars.$blog-color;
+          padding: 15px 10px;
+          text-align: center;
+          color: white;
+        }
+
+        &:hover {
+          animation: wiggle 2s linear;
+        }
+      }
+    }
+  }
+
+  &-countryListContinent {
+    width: 100%;
+    margin: auto;
+    &-title {
+      color: rgba(40, 40, 40, 0.964);
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 90px auto;
+      span {
+        display: inline-block;
+        height: 1px;
+        width: 30%;
+        background: black;
+      }
+      font-size: 2rem;
+      font-weight: 200;
+      text-align: center;
+    }
+    &-list {
+      width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      row-gap: 15px;
+      column-gap: 15px;
+      &-item {
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        overflow: hidden;
+        &:hover &-title {
+          top: 85%;
+          background: vars.$blog-color;
+        }
+
+        &-img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        &-title {
+          transition: 0.5s;
+          width: 80%;
+          text-align: center;
+          margin: auto;
+          border-radius: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 1.6rem;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-4deg);
+  }
+  20% {
+    transform: rotateZ(3deg);
+  }
+  25% {
+    transform: rotateZ(-2deg);
+  }
+  30% {
+    transform: rotateZ(1deg);
+  }
+  35% {
+    transform: rotateZ(-0.5deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@media (max-width: 1400px) {
+  .main-alldestinations {
+    &-countryListPays-list,
+    &-countryListContinent-list {
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 90%;
+      &-item {
+        &-img {
+          width: 100%;
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-alldestinations {
+    &-countryListPays-list,
+    &-countryListContinent-list {
+      grid-template-columns: 1fr 1fr;
+      width: 90%;
+      &-item {
+        &-img {
+          width: 100%;
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main-alldestinations {
+    &-description {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    &-continent {
+      width: 350px;
+      margin: 50px auto 100px;
+      padding: 0;
+
+      &-item {
+        margin: auto;
+        width: 350px;
+        margin-bottom: 190px;
+        position: relative;
+
+        &-content {
+          height: 350px;
+          width: 350px;
+          margin: 80px auto;
+          position: relative;
+          &-text {
+            transform: translate(-50%, 20%);
+            width: 300px;
+            height: 250px;
+            padding: 10px;
+          }
+          &-img {
+            height: 350px;
+            width: 350px;
+            right: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        &-countryList {
+          position: absolute;
+          top: 480px;
+          &-link {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      &-item-pair {
+        .main-alldestinations-continent-item-content {
+          .main-alldestinations-continent-item-content-text {
+            background-color: vars.$blog-secondColor;
+            position: absolute;
+            left: 50%;
+          }
+          &-img {
+            height: 350px;
+            width: 350px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+
+    &-countryListPays-list,
+    &-countryListContinent-list {
+      grid-template-columns: 1fr;
+      width: 70%;
+      &-item {
+        &-img {
+          width: 100%;
+          height: 350px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.main-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-content {
+    height: 80%;
+    width: 80%;
+    position: relative;
+    &:hover &-title {
+      text-shadow: 2px 2px 0 rgba(255, 255, 255, 1),
+        3px 3px 0 rgba(255, 255, 255, 0.8), 4px 4px rgba(255, 255, 255, 0.6),
+        5px 5px 0 rgba(255, 255, 255, 0.4);
+      top: calc(45% - 5px);
+      left: calc(50% - 5px);
+    }
+    &:hover &-image {
+      filter: grayscale(0);
+    }
+
+    &-title {
+      font-size: 5vmax;
+      font-weight: 400;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%);
+      position: absolute;
+      z-index: 500;
+      color: white;
+      transition: 0.5s;
+    }
+    &-image {
+      height: 100%;
+      filter: grayscale(100%);
+      transition: 0.5s;
+    }
+  }
+}

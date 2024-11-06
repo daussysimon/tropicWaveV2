@@ -1,0 +1,183 @@
+@use "vars";
+
+.missionDescription-title {
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 100% 100%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
+  font-family: vars.$font, Arial, Helvetica, sans-serif;
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin-top: 5px;
+  }
+}
+.missionDescription-body {
+  height: calc(100vh - 130px);
+  width: 95%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &-content {
+    overflow-y: scroll;
+    padding: 20px;
+    height: 90%;
+    width: 60%;
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-weight: 700;
+      margin: 15px 0;
+      font-size: 1.6rem;
+    }
+    ul,
+    ol {
+      margin-bottom: 15px;
+    }
+    li {
+      margin-left: 15px;
+      list-style: inside;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.missionDescription-exemple {
+  width: 30%;
+  padding: 30px 0;
+  height: 100%;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-item {
+    flex-grow: 4;
+    width: 250px;
+    height: 300px !important;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+
+    h4 {
+      font-weight: 700;
+      margin: 15px 10px 15px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    img {
+      border-radius: 0 0 20px 20px;
+      width: 100%;
+      display: block;
+    }
+    &--link {
+      height: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 0 0 20px 20px;
+      background: rgba(0, 0, 0, 0.486);
+      left: 0;
+      opacity: 0;
+      transition: 0.5s;
+
+      a {
+        color: white;
+      }
+    }
+  }
+  &-item-web {
+    height: 200px !important;
+  }
+}
+
+.missionDescription-exemple-item:hover .missionDescription-exemple-item--link {
+  height: 40px;
+  opacity: 1;
+}
+
+@media (max-width: 680px) {
+  .main-missionDescription {
+    overflow-y: scroll;
+  }
+  .missionDescription-title {
+    position: fixed;
+    width: 100%;
+    top: 40px;
+    left: 0;
+    z-index: 600;
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+  }
+  .missionDescription-body {
+    display: block;
+    height: calc(100vh - 160px);
+    &-content {
+      margin-top: 40px;
+      overflow-y: initial;
+      padding: 30px;
+      height: auto;
+      width: 100%;
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-weight: 700;
+        margin: 15px 0;
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+
+      ol,
+      ul {
+        li {
+          font-size: 0.8rem;
+        }
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  .missionDescription-exemple {
+    width: auto;
+    margin: auto;
+    align-items: center;
+    padding: 0;
+    padding-bottom: 70px;
+    height: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &-item {
+      width: 250px;
+      margin: 20px auto;
+    }
+  }
+}

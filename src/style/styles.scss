@@ -1,0 +1,73 @@
+@use "vars";
+@use "reset";
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: local("Roboto Mono Regular"),
+    url("../fonts/roboto-mono/RobotoMono-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: local("Roboto Mono ExtraLight"),
+    url("../fonts/roboto-mono/RobotoMono-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nixie One";
+  src: local("Nixie One"),
+    url("../fonts/nixie-one/NixieOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: local("Caveat"),
+    url("../fonts/caveat/Caveat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+* {
+  font-family: vars.$font, Arial, Helvetica, sans-serif;
+}
+
+.layout {
+  height: 100%;
+
+  &-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+}
+
+.layout-blog {
+  height: auto;
+  main {
+    height: auto;
+  }
+  .layout-content {
+    overflow-y: auto;
+  }
+}
+
+.main {
+  height: calc(100% - 55px);
+}
+
+@media (min-width: 680px) {
+  .main {
+    height: calc(100% - 65px);
+  }
+}
+body::-webkit-scrollbar {
+  display: none;
+}
