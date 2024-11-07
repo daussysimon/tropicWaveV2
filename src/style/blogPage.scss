@@ -3,7 +3,7 @@
 .main-blog {
   background: #f7f4ef;
   overflow: hidden;
-  color: vars.$blog-color;
+  color: vars(blog-color);
   section {
     margin-top: 90px;
   }
@@ -39,7 +39,7 @@
           width: 100%;
           display: block;
           position: absolute;
-          background-color: vars.$blog-color;
+          background-color: vars(blog-color);
           top: -25px;
           left: -25px;
         }
@@ -92,7 +92,7 @@
         }
         &-link {
           padding: 10px 20px;
-          background-color: vars.$blog-color;
+          background-color: vars(blog-color);
           width: 259px;
           text-align: center;
           display: block;
@@ -100,7 +100,7 @@
           margin: 20px auto;
           transition: 0.5s;
           &:hover {
-            background: rgba(vars.$blog-color, 0.6);
+            background: rgba(vars(blog-color), 0.6);
           }
         }
       }
@@ -164,7 +164,7 @@
       &-cartCountry {
         width: 250px;
         margin: 10px;
-        background-color: vars.$blog-color;
+        background-color: vars(blog-color);
         &-img {
           height: 250px;
           width: 250px;
@@ -197,7 +197,7 @@
         &-imgDeco {
           height: 100%;
           width: 100%;
-          border: solid 10px vars.$blog-color;
+          border: solid 10px vars(blog-color);
           position: absolute;
           top: -25px;
           left: 25px;
@@ -211,7 +211,7 @@
         }
         &-link {
           padding: 10px 20px;
-          background-color: vars.$blog-color;
+          background-color: vars(blog-color);
           width: 259px;
           text-align: center;
           display: block;
@@ -219,7 +219,7 @@
           margin: 20px auto;
           transition: 0.5s;
           &:hover {
-            background: rgba(vars.$blog-color, 0.6);
+            background: rgba(vars(blog-color), 0.6);
           }
         }
       }
@@ -319,7 +319,7 @@
           }
           &-link {
             padding: 10px 20px;
-            background-color: vars.$blog-color;
+            background-color: vars(blog-color);
             width: 259px;
             text-align: center;
             display: block;
@@ -327,7 +327,7 @@
             margin: 30px auto;
             transition: 0.5s;
             &:hover {
-              background: vars.$blog-color;
+              background: vars(blog-color);
             }
           }
         }

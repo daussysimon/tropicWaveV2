@@ -2,8 +2,6 @@ import React from "react";
 import BlogNavBar from "./BlogNavbar";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
-import "./style.scss";
-
 const BlogHeader = ({ backgroundImg, fullHeight, type }) => {
   const imageHeader = getImage(backgroundImg?.picture);
 

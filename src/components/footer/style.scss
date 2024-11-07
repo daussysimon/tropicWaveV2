@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: vars.$main-color;
+  color: vars(main-color);
   position: absolute;
   border-radius: 50% 50% 0 0;
   z-index: 1200;
@@ -56,7 +56,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: vars.$blog-color;
+  background: var(main-color);
 
   p {
     color: white;
@@ -125,7 +125,7 @@
     padding: 5px;
     align-items: center;
     width: 100%;
-    background: vars.$blog-color;
+    background: vars(blog-color);
 
     p {
       color: white;

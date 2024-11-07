@@ -16,12 +16,12 @@
         top: 60%;
         left: 0;
         opacity: 0.5;
-        background-color: vars.$blog-secondColor;
+        background-color: vars(blog-secondColor);
         transition: 0.5s;
       }
       &:hover {
         &:after {
-          background-color: vars.$blog-color;
+          background-color: vars(blog-color);
         }
       }
     }
@@ -31,7 +31,7 @@
     margin-top: 50px;
     font-family: "Nixie One", Arial, Helvetica, sans-serif;
     text-align: center;
-    color: vars.$blog-color;
+    color: vars(blog-color);
   }
   &-subtitle {
     font-size: 1rem;
@@ -59,7 +59,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      background-color: vars.$blog-color;
+      background-color: vars(blog-color);
       width: 400px;
       padding: 20px;
       transform: translate(-70px, 70px);
@@ -84,7 +84,7 @@
 
             &:after {
               content: "|";
-              color: vars.$blog-secondColor;
+              color: vars(blog-secondColor);
               margin-left: 5px;
             }
           }

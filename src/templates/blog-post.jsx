@@ -7,7 +7,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({ data, continent, articles }) => {
-  console.log(data.html);
   return (
     <main className="main-blogPost">
       <nav className="main-blogPost-link">

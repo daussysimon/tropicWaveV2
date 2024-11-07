@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, graphql, StaticQuery, withPrefix } from "gatsby";
-import "./style.scss";
 
 /* eslint-disable */
 

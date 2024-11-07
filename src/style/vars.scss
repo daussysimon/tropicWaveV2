@@ -1,5 +1,9 @@
-$font: "Roboto Mono";
-$main-color: #000000;
-$second-color: rgb(21, 16, 80);
-$blog-color: #9ec4ca;
-$blog-secondColor: #f7f4ef;
+:root {
+  --main-color: #000000;
+  --second-color: rgb(21, 16, 80);
+  --para-color: rgba(56, 53, 48, 0.678);
+  --font: "Roboto Mono";
+  --second-font: "Inconsolata", sans-serif;
+  --blog-color: #9ec4ca;
+  --blog-secondColor: #f7f4ef;
+}
